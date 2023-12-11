@@ -1,0 +1,32 @@
+###
+
+GET http://localhost:3000/books/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzAyMjY4ODQ0fQ.k1rqjmkuAbX1PXosMMuSO7pnqurBlVJzk7zsYY5dr8I
+ // above one: sending the jwt token to the server
+ // or making an API call by using the jwt token generated
+ // note: jwt token is generated when we try to login (see below or login code in index.js)
+
+
+###
+
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{   
+    "name":"rahul",
+    "username":"rahul123",
+    "password": "rahul@456",
+    "gender": "Male",
+    "location":"hyderabad"
+}
+
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username":"rahul123",
+    "password": "rahul@456"
+}
